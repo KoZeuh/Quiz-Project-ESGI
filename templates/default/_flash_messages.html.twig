@@ -1,0 +1,24 @@
+<div>
+    {% for type, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="relative px-4 py-3 mb-4 border rounded {{ 
+                type == 'success' ? 'border-green-400 bg-green-100 text-green-700' : 
+                type == 'error' ? 'border-red-400 bg-red-100 text-red-700' : 
+                type == 'warning' ? 'border-yellow-400 bg-yellow-100 text-yellow-700' : 
+                'border-blue-400 bg-blue-100 text-blue-700' 
+            }}" role="alert">
+
+                <button type="button" class="absolute top-0 bottom-0 right-0 px-4 py-3 focus:outline-none" data-dismiss="alert" aria-label="Close">
+                    <svg class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <i class="fas fa-info-circle"></i>
+
+                {{ message|trans }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
+

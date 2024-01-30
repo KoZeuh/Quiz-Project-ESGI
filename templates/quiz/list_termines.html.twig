@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{'list_finished_quiz_title'|trans}}{% endblock %}
+
+{% block main %}
+    {% if app.user %}
+
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger text-center">{{ message }}</div>
+        {% endfor %}
+
+        {% if quizResults is empty %}
+            <div class="card-body px-0 pb-2">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <p class="fs-3"> <span class="text-danger">Opps!</span> {{'none_quiz_finished'|trans}}</p>
+                        <p class="lead">
+                            {{'no_quiz_participated'|trans}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="card-header pb-0">
+                            <h6 class="text-center">{{'list_finished_quiz_title'|trans}}</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center justify-content-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{'lastname'|trans}}</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">{{'created_at'|trans}}</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">{{'category'|trans}}</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">{{'duration'|trans}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for quizId, quizResult in quizResults %}
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex px-2">
+                                                        <div>
+                                                            <img src="https://picsum.photos/id/{{random(1,100)}}/200/300" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                                                        </div>
+                                                        <div class="my-auto">
+                                                            <h6 class="mb-0 text-sm"><a style="cursor:pointer" href="{{ path('show_resultat_quiz', {'id': quizResult.quiz.id}) }}">{{ quizResult.quiz.libelle }}</a></h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="text-sm font-weight-bold mb-0">{{ quizResult.quiz.createdAt|date('d/m/Y') }}</p>
+                                                </td>
+
+                                                <td>
+                                                    <p class="text-sm font-weight-bold mb-0">{{ quizResult.quiz.categorie }}</p>
+                                                </td>
+
+                                                <td class="align-middle text-center">
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <span class="me-2 text-xs font-weight-bold">{{ quizResult.quiz.duration }} minute(s)</span>
+                                                        <div>
+                                                            <div class="progress">
+                                                                {% set progressValue = (quizResult.quiz.duration / 60) * 100 %}
+                                                                <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="{{ progressValue }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ progressValue }}%;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock %}

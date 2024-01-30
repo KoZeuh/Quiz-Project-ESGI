@@ -1,0 +1,238 @@
+{% extends '@EasyAdmin/layout.html.twig' %}
+
+{% block main %}
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    {% if app.user %}
+
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger text-center">{{ message }}</div>
+        {% endfor %}
+
+
+        {% if not statistiques.responses is defined %}
+            <div class="card-body px-0 pb-2">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <p class="fs-3"> <span class="text-danger">Opps!</span> {{'error'|trans}}</p>
+                        <p class="lead">
+                            {{'reload_page'|trans}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            {% if statistiques.totalQuestions > 0 %}
+                {% set timeIsExceeded = statistiques.totalDurationInMinutes > quiz.duration %}
+
+                <input type="hidden" id="successRate" value="{{ statistiques.successRate }}">
+
+                <div class="row d-flex justify-content-around">
+                    <div class="col-lg-3 col-sm-6 mb-1">
+                        <div class="card h-75">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="card-info">
+                                        <p class="card-text">{{'completion_time'|trans}}</p>
+                                        <div class="d-flex align-items-end mb-2">
+                                            <h4 class="card-title mb-0 me-2 {% if timeIsExceeded %} text-warning {% else %} text-success {% endif %}">{{ statistiques.totalDurationInHours }} h, {{ statistiques.totalDurationInMinutes }} m, {{ statistiques.totalDurationInSeconds }} s</h4>
+                                        </div>
+                                        <div class="d-flex align-items-end mb-2">
+                                            <span class="card-text">{{'on_'|trans}} {{ quiz.duration }} minute(s)</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-icon">
+                                        <span class="badge bg-label-info rounded p-2">
+                                            <i class="bx bx-time-five bx-sm"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 mb-1">
+                        <div class="card h-75">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="card-info">
+                                        <div id="chart"></div>
+                                    </div>
+
+                                    <span class="text-center">{{statistiques.correctAnswers}} {{'right_answer'|trans}} {{'on_'|trans}} {{statistiques.totalQuestions}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="averageTimePerQuestion" value="{{ statistiques.averageTimePerQuestion.seconds }}">
+
+                    <div class="col-lg-3 col-sm-6 mb-1">
+                        <div class="card h-75">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="card-info">
+                                        <div id="chart_temps_m_p_q"></div>
+                                    </div>
+
+                                    <span class="text-center">{{'second_average_p_question'|trans}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header pb-0">
+                            <h6 class="text-center">Détails {{'from_'|trans}} quiz ({{ quiz.libelle }}) {{'created_by'|trans}} ({{user}})</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center justify-content-center mb-0 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Question</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{'answer_available'|trans}}</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{'correct_answer'|trans}}</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{'answer_selected'|trans}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for questionId, response in statistiques.responses %}
+                                            <tr>
+                                                <td>
+                                                    <p class="text-sm font-weight-bold mb-0">{{ response.question.libelle }}</p>
+                                                </td>
+                                                <td>
+                                                    <ul style="text-align: center; list-style-position: inside;">
+                                                        {% for reponse in response.reponses %}
+                                                            <li>{{ reponse.libelle }}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <ul style="text-align: center; list-style-position: inside;">
+                                                        {% for reponse in response.reponses %}
+                                                            {% if reponse.bonneReponse %}
+                                                                <li>{{ reponse.libelle }}</li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <ul style="text-align: center; list-style-position: inside;">
+                                                        {% for userResponse in statistiques.userQuizResponses[questionId] %}
+                                                            <li>{{ userResponse.libelle }}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const successRate = parseInt(document.getElementById('successRate').value);
+
+            var options = {
+                series: [successRate],
+                chart: {
+                    height: 200,
+                    type: 'radialBar',
+                    offsetY: -30
+                },
+                plotOptions: {
+                    radialBar: {
+                        startAngle: -135,
+                        endAngle: 135,
+                    }
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        shadeIntensity: 0.15,
+                        inverseColors: false,
+                        opacityFrom: 1,
+                        opacityTo: 1,
+                        stops: [0, 50, 65, 91]
+                    },
+                },
+                stroke: {
+                    dashArray: 4
+                },
+                labels: [''],
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+
+            const averageTimePerQuestion = parseInt(document.getElementById('averageTimePerQuestion').value);
+
+            var options = {
+                series: [averageTimePerQuestion],
+                chart: {
+                    height: 200,
+                    type: 'radialBar',
+                    offsetY: -30
+                },
+                plotOptions: {
+                    radialBar: {
+                        startAngle: -135,
+                        endAngle: 135,
+                        dataLabels: {
+                            name: {
+                                fontSize: '22px',
+                            },
+                            value: {
+                                fontSize: '16px',
+                                formatter: function () {
+                                    return '';
+                                }
+                            },
+                            total: {
+                                show: true,
+                                label: averageTimePerQuestion,
+                                formatter: function () {
+                                    return '';
+                                }
+                            }
+                        }
+                    }
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        shadeIntensity: 0.15,
+                        inverseColors: false,
+                        opacityFrom: 1,
+                        opacityTo: 1,
+                        stops: [0, 50, 65, 91]
+                    },
+                },
+                stroke: {
+                    dashArray: 4
+                },
+                labels: ['seconde(s)'],
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart_temps_m_p_q"), options);
+            chart.render();
+
+        });
+    </script>
+{% endblock main %}

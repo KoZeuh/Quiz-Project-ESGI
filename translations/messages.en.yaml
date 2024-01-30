@@ -1,0 +1,102 @@
+home_nav_title: Home
+list_quiz_nav_title: List of Quizzes
+my_results_nav_title: My Results
+management_separator_nav_title: Management
+profile_nav_title: Profile
+admin_nav_title: Administration
+results_title: Results
+login_nav_title: Login
+logout_nav_title: Log Out
+register_nav_title: Register
+
+count_quiz: Number of Quizzes
+count_users: Active Member(s)
+categories_title: Category(ies)
+
+welcome_title: Welcome to ESGI Quiz!
+welcome_paragraph: You are on the best French-speaking quiz site. Log in or sign up to enjoy an extraordinary experience!
+
+join_us_title: Want to join us?
+join_us_paragraph: ESGI Quiz is recruiting developers, now is the time to seize your chance!
+join_us_apply: Apply
+
+my_quiz_in_progress_title: My Ongoing Quizzes
+no_quiz_in_progress_title: No Ongoing Quizzes..
+reload_page: Please reload the page if you think there is an error.
+
+my_recently_completed_quiz_title: My Recently Completed Quizzes
+achieved: achieved
+this_month: this month
+
+my_profile_title: My Profile
+change_password_title: Change Password
+change_password_title_2: Changing Your Password
+change_email_title: Change Email
+change_email_title_2: Changing Your Email
+appli_settings_title: Application Settings
+personal_informations_title: Personal Information
+
+welcome_back_login_title: Welcome Back!
+welcome_back_login_paragraph: Enter your information to log in.
+register_paragraph: Enter your information to register.
+dont_have_account: Don't have an account?
+already_have_account: Already have an account?
+
+list_finished_quiz_title: List of Finished Quizzes
+list_quiz_title: List of Quizzes
+no_quiz_participated: Continue answering quizzes to see results here.
+none_quiz_finished: You haven't finished any quizzes.
+related_promotions: related to your promotion
+related_promotions_2: related to the promotion
+
+result_quiz_title: Quiz Result
+quiz_in_progress_title: Quiz in Progress
+
+list_promotions_title: List of Promotions
+count_users_title: Number of Users
+count_quiz_title: Number of Quizzes
+
+list_users_related_quiz_title: List of Users Related to Quiz
+
+average_time_per_user: Average Time per Student
+average_success_rate: Average Success Rate
+
+label: Label
+category: Category
+count_questions: Number of Questions
+progress: Progress
+actions: Actions
+account: Account
+firstname: First Name
+lastname: Last Name
+email: Email
+password: Password
+cancel: Cancel
+confirm: Confirm
+remember_me: Remember Me
+login: Log In
+register: Register
+register_2: Registration
+welcome: Welcome
+created_at: Creation Date
+duration: Duration
+error: An error seems to have occurred..
+completion_time: Completion Time
+on_: out of
+right_answer_on: correct answer out of
+right_answer: correct answer
+second_average_p_question: second on average per question
+details_quiz: Quiz Details
+answer_available: Answer(s) Available
+answer_not_available: Answer(s) Not Available
+answer_selected: Answer(s) Selected
+correct_answer: Correct Answer(s)
+question_not_available: No Question Available.
+send: Send
+remaining_time: Remaining Time
+success_rate: Success Rate
+time_exceeded: Time Exceeded
+unknown: Unknown
+finish: Finished
+from_: from
+created_by: created by

@@ -1,0 +1,102 @@
+home_nav_title: Startseite
+list_quiz_nav_title: Liste der Quizze
+my_results_nav_title: Meine Ergebnisse
+management_separator_nav_title: Verwaltung
+profile_nav_title: Profil
+admin_nav_title: Administration
+results_title: Ergebnisse
+login_nav_title: Anmelden
+logout_nav_title: Abmelden
+register_nav_title: Registrieren
+
+count_quiz: Anzahl der Quizze
+count_users: Aktive Mitglieder
+categories_title: Kategorie(n)
+
+welcome_title: Willkommen bei ESGI Quiz!
+welcome_paragraph: Sie sind auf der besten französischsprachigen Quiz-Seite. Loggen Sie sich ein oder registrieren Sie sich, um ein außergewöhnliches Erlebnis zu genießen!
+
+join_us_title: Möchten Sie uns beitreten?
+join_us_paragraph: ESGI Quiz sucht Entwickler, jetzt ist die Zeit, Ihre Chance zu ergreifen!
+join_us_apply: Bewerben
+
+my_quiz_in_progress_title: Meine laufenden Quizze
+no_quiz_in_progress_title: Keine laufenden Quizze..
+reload_page: Bitte laden Sie die Seite neu, wenn Sie denken, dass ein Fehler vorliegt.
+
+my_recently_completed_quiz_title: Meine kürzlich abgeschlossenen Quizze
+achieved: erreicht
+this_month: diesen Monat
+
+my_profile_title: Mein Profil
+change_password_title: Passwort ändern
+change_password_title_2: Ihr Passwort ändern
+change_email_title: E-Mail ändern
+change_email_title_2: Ihre E-Mail ändern
+appli_settings_title: Anwendungseinstellungen
+personal_informations_title: Persönliche Informationen
+
+welcome_back_login_title: Willkommen zurück!
+welcome_back_login_paragraph: Geben Sie Ihre Informationen ein, um sich anzumelden.
+register_paragraph: Geben Sie Ihre Informationen ein, um sich zu registrieren.
+dont_have_account: Kein Konto?
+already_have_account: Bereits ein Konto?
+
+list_finished_quiz_title: Liste der beendeten Quizze
+list_quiz_title: Liste der Quizze
+no_quiz_participated: Machen Sie weiter bei Quizzen mit, um hier Ergebnisse zu sehen.
+none_quiz_finished: Sie haben keine Quizze beendet.
+related_promotions: bezogen auf Ihre Promotion
+related_promotions_2: bezogen auf die Promotion
+
+result_quiz_title: Quiz-Ergebnis
+quiz_in_progress_title: Quiz in Bearbeitung
+
+list_promotions_title: Liste der Promotionen
+count_users_title: Anzahl der Benutzer
+count_quiz_title: Anzahl der Quizze
+
+list_users_related_quiz_title: Liste der Benutzer im Zusammenhang mit dem Quiz
+
+average_time_per_user: Durchschnittliche Zeit pro Student
+average_success_rate: Durchschnittliche Erfolgsquote
+
+label: Bezeichnung
+category: Kategorie
+count_questions: Anzahl der Fragen
+progress: Fortschritt
+actions: Aktionen
+account: Konto
+firstname: Vorname
+lastname: Nachname
+email: E-Mail
+password: Passwort
+cancel: Abbrechen
+confirm: Bestätigen
+remember_me: Angemeldet bleiben
+login: Anmelden
+register: Registrieren
+register_2: Registrierung
+welcome: Willkommen
+created_at: Erstellungsdatum
+duration: Dauer
+error: Ein Fehler scheint aufgetreten zu sein..
+completion_time: Bearbeitungszeit
+on_: von
+right_answer_on: richtige Antwort von
+right_answer: richtige Antwort
+second_average_p_question: Sekunde im Durchschnitt pro Frage
+details_quiz: Quiz-Details
+answer_available: Antwort(en) verfügbar
+answer_not_available: Antwort(en) nicht verfügbar
+answer_selected: Antwort(en) ausgewählt
+correct_answer: Richtige Antwort(en)
+question_not_available: Keine Frage verfügbar.
+send: Senden
+remaining_time: Verbleibende Zeit
+success_rate: Erfolgsquote
+time_exceeded: Zeit überschritten
+unknown: Unbekannt
+finish: Beendet
+from_: von
+created_by: erstellt von

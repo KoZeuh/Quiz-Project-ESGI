@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{'quiz_in_progress_title'|trans}}{% endblock %}
+
+{% block main %}
+    {% if app.user %}
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger text-center">{{ message }}</div>
+        {% endfor %}
+
+        {% if not quiz is defined or not question is defined %}
+            <div class="card shadow-5-strong">
+                <div class="card-body text-center">
+                    <p class="fs-3"> <span class="text-danger">Opps!</span> {{'error'|trans}}</p>
+                    <p class="lead">
+                        {{'reload_page'|trans}}
+                    </p>
+                </div>
+            </div>
+        {% else %}
+            <div class="row">
+                <div class="col-12">
+                    <form method="post" action="{{ path('envoi_reponse_question_quiz', {'id': quiz.id, 'question': question.id}) }}">
+                        <div class="card mb-4 shadow-5-strong">
+                            <div class="card-header text-center">
+                                <h5>Question {{ nombreQuestionsRepondues }} / {{ nombreQuestionsTotal }}</h5>
+                            </div>
+                            <div class="card-body">
+                                {% if question %}
+                                    <h6 class="card-title">{{ question.libelle }}</h6>
+                                    {% if question.qcm %}
+                                        <div class="form-group">
+                                            {% for reponse in question.reponses %}
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="reponses[]" value="{{ reponse.id }}" id="check_{{ reponse.id }}">
+                                                    <label class="form-check-label" for="check_{{ reponse.id }}">
+                                                        {{ reponse.libelle }}
+                                                    </label>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        <div class="form-group">
+                                            {% for reponse in question.reponses %}
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="reponse" value="{{ reponse.id }}" id="radio_{{ reponse.id }}">
+                                                    <label class="form-check-label" for="radio_{{ reponse.id }}">
+                                                        {{ reponse.libelle }}
+                                                    </label>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                {% else %}
+                                    <p class="card-text">{{'question_not_available'|trans}}</p>
+                                {% endif %}
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" class="btn btn-primary btn-md">{{'send'|trans}}</button>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: {{ (nombreQuestionsRepondues / nombreQuestionsTotal) * 100 }}%;" aria-valuenow="{{ nombreQuestionsRepondues }}" aria-valuemin="0" aria-valuemax="{{ nombreQuestionsTotal }}"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="quiz-timer" class="text-center mt-4">
+                <h5>{{'remaining_time'|trans}} : <span id="countdown" class="badge bg-warning text-dark"></span></h5>
+
+                <input type="hidden" id="quiz-duration" value="{{ quiz.duration }}">
+                <input type="hidden" id="quiz-start-time" value="{{ userSuivi.startTime|date('Y-m-d H:i:s') }}">
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quizDurationMinutes = parseInt(document.getElementById('quiz-duration').value);
+            const quizStartTime = new Date(document.getElementById('quiz-start-time').value).getTime();
+
+            const now = new Date().getTime();
+            const timeElapsedSeconds = Math.floor((now - quizStartTime) / 1000);
+            const quizDurationSeconds = quizDurationMinutes * 60;
+            const remainingTimeSeconds = Math.max(quizDurationSeconds - timeElapsedSeconds, 0);
+
+            displayTimeLeft(remainingTimeSeconds);    
+
+            function displayTimeLeft(seconds) {
+                const countdownElement = document.getElementById('countdown');
+                let remainingTime = seconds;
+
+                const timer = setInterval(() => {
+                    const hoursDisplay = Math.floor(remainingTime / 3600);
+                    const minutesDisplay = Math.floor((remainingTime % 3600) / 60);
+                    const secondsDisplay = remainingTime % 60;
+
+                    let timeString = '';
+                    if (hoursDisplay > 0) {
+                        timeString += `${hoursDisplay}h `;
+                    }
+
+                    timeString += `${minutesDisplay.toString().padStart(2, '0')}m ${secondsDisplay.toString().padStart(2, '0')}s`;
+
+                    countdownElement.textContent = timeString;
+
+                    remainingTime--;
+
+                    if (remainingTime < 0) {
+                        clearInterval(timer);
+                        countdownElement.textContent = 'Temps écoulé';
+                    }
+                }, 1000);
+            }
+        });
+    </script>
+{% endblock %}

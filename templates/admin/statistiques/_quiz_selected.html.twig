@@ -1,0 +1,56 @@
+{% extends '@EasyAdmin/layout.html.twig' %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6 class="text-center">{{'list_users_related_quiz_title'|trans}} ({{quiz.libelle}})</h6>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center justify-content-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">{{'lastname'|trans}}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Statut</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">{{'duration'|trans}}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">{{'success_rate'|trans}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for userStat in usersAndStatistiques %}
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2">
+                                                <div class="my-auto">
+                                                    <h6 class="mb-0 text-sm"><a style="cursor:pointer" href="{{ path('show_admin_statistiques_quiz_user_selected', {'id': quiz.id, 'user_id': userStat.user.id}) }}">{{userStat.user}}</a></h6>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            {% set timeIsExceeded = userStat.statistiques.totalDurationInMinutes > quiz.duration %}
+                                            {% set isFinished = userStat.statistiques.totalDurationInMinutes > 0 %}
+                                            <p class="text-sm font-weight-bold mb-0">{% if timeIsExceeded %}<span class="badge badge-sm bg-gradient-danger">{{'time_exceeded'|trans}}</span>{% elseif isFinished %}<span class="badge badge-sm bg-gradient-success">{{'finish'|trans}}</span>{% else %}<span class="badge badge-sm bg-gradient-warning">{{'unknow'|trans}}</span>{% endif %}</p>
+                                        </td>
+
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <span class="me-2 text-xs font-weight-bold">{{ userStat.statistiques.totalDurationInHours }} h, {{ userStat.statistiques.totalDurationInMinutes }} m, {{ userStat.statistiques.totalDurationInSeconds }} s</span>
+                                            <div>
+                                        </td>
+
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">{{ userStat.statistiques.successRate }}%</span>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

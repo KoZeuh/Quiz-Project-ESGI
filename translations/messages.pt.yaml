@@ -1,0 +1,102 @@
+home_nav_title: Início
+list_quiz_nav_title: Lista de Questionários
+my_results_nav_title: Meus Resultados
+management_separator_nav_title: Gestão
+profile_nav_title: Perfil
+admin_nav_title: Administração
+results_title: Resultados
+login_nav_title: Entrar
+logout_nav_title: Sair
+register_nav_title: Registrar
+
+count_quiz: Número de Questionários
+count_users: Membro(s) Ativo(s)
+categories_title: Categoria(s)
+
+welcome_title: Bem-vindo ao ESGI Quiz!
+welcome_paragraph: Você está no melhor site de questionários em língua francesa. Entre ou cadastre-se para desfrutar de uma experiência extraordinária!
+
+join_us_title: Quer juntar-se a nós?
+join_us_paragraph: ESGI Quiz está recrutando desenvolvedores, agora é a hora de aproveitar sua chance!
+join_us_apply: Candidatar-se
+
+my_quiz_in_progress_title: Meus Questionários em Andamento
+no_quiz_in_progress_title: Nenhum Questionário em Andamento..
+reload_page: Por favor, recarregue a página se achar que há um erro.
+
+my_recently_completed_quiz_title: Meus Questionários Recentes Completos
+achieved: realizado
+this_month: este mês
+
+my_profile_title: Meu Perfil
+change_password_title: Alterar Senha
+change_password_title_2: Alterando Sua Senha
+change_email_title: Alterar Email
+change_email_title_2: Alterando Seu Email
+appli_settings_title: Configurações da Aplicação
+personal_informations_title: Informação Pessoal
+
+welcome_back_login_title: Bem-vindo de Volta!
+welcome_back_login_paragraph: Insira suas informações para entrar.
+register_paragraph: Insira suas informações para se registrar.
+dont_have_account: Não tem uma conta?
+already_have_account: Já tem uma conta?
+
+list_finished_quiz_title: Lista de Questionários Concluídos
+list_quiz_title: Lista de Questionários
+no_quiz_participated: Continue respondendo a questionários para ver resultados aqui.
+none_quiz_finished: Você não terminou nenhum questionário.
+related_promotions: relacionado à sua promoção
+related_promotions_2: relacionado à promoção
+
+result_quiz_title: Resultado do Questionário
+quiz_in_progress_title: Questionário em Andamento
+
+list_promotions_title: Lista de Promoções
+count_users_title: Número de Usuários
+count_quiz_title: Número de Questionários
+
+list_users_related_quiz_title: Lista de Usuários Relacionados ao Questionário
+
+average_time_per_user: Tempo Médio por Aluno
+average_success_rate: Taxa de Sucesso Média
+
+label: Rótulo
+category: Categoria
+count_questions: Número de Perguntas
+progress: Progresso
+actions: Ações
+account: Conta
+firstname: Primeiro Nome
+lastname: Sobrenome
+email: Email
+password: Senha
+cancel: Cancelar
+confirm: Confirmar
+remember_me: Lembrar-me
+login: Entrar
+register: Registrar
+register_2: Registro
+welcome: Bem-vindo
+created_at: Data de Criação
+duration: Duração
+error: Parece que ocorreu um erro..
+completion_time: Tempo de Conclusão
+on_: de
+right_answer_on: resposta(s) correta(s) de
+right_answer: resposta correta
+second_average_p_question: segundo em média por pergunta
+details_quiz: Detalhes do Questionário
+answer_available: Resposta(s) Disponível(is)
+answer_not_available: Resposta(s) Não Disponível(is)
+answer_selected: Resposta(s) Selecionada(s)
+correct_answer: Resposta(s) Correta(s)
+question_not_available: Nenhuma Pergunta Disponível.
+send: Enviar
+remaining_time: Tempo Restante
+success_rate: Taxa de Sucesso
+time_exceeded: Tempo Excedido
+unknown: Desconhecido
+finish: Concluído
+from_: de
+created_by: criado por

@@ -1,0 +1,102 @@
+home_nav_title: Accueil
+list_quiz_nav_title: Liste des quiz
+my_results_nav_title: Mes résultats
+management_separator_nav_title: Gestion
+profile_nav_title: Profil
+admin_nav_title: Administration
+results_title: Résultats
+login_nav_title: Connexion
+logout_nav_title: Se déconnecter
+register_nav_title: S'inscrire
+
+count_quiz: Nombre de quiz
+count_users: Membre(s) actif(s)
+categories_title: Catégorie(s)
+
+welcome_title: Bienvenue sur l'ESGI Quiz !
+welcome_paragraph: Vous vous trouvez sur le meilleur site de quiz francophone. Connectez-vous ou inscrivez-vous pour profiter d'une expérience hors du commun !
+
+join_us_title: Une envie de nous rejoindre ?
+join_us_paragraph: ESGI Quiz recrute des développeurs, c'est le moment de saisir votre chance !
+join_us_apply: Postuler
+
+my_quiz_in_progress_title: Mes quiz en cours
+no_quiz_in_progress_title: Aucun quiz en cours..
+reload_page: Veuillez recharger la page si vous pensez qu'il y a une erreur.
+
+my_recently_completed_quiz_title: Mes récents quiz terminés
+achieved: réalisé(s)
+this_month: ce mois-ci
+
+my_profile_title: Mon profil
+change_password_title: Changer de mot de passe
+change_password_title_2: Modification de votre mot de passe
+change_email_title: Changer d'email
+change_email_title_2: Modification de votre email
+appli_settings_title: Paramètres de l'application
+personal_informations_title: Informations personnelles
+
+welcome_back_login_title: Bon retour parmi nous !
+welcome_back_login_paragraph: Entrez vos informations pour vous connecter.
+register_paragraph: Entrez vos informations pour vous inscrire.
+dont_have_account: Vous n'avez pas de compte ?
+already_have_account: Vous avez déjà un compte ?
+
+list_finished_quiz_title: Liste des quiz terminés
+list_quiz_title: Liste des quiz
+no_quiz_participated: Continuez à répondre aux quiz pour voir les résultats ici.
+none_quiz_finished: Vous n'avez terminé aucun quiz.
+related_promotions: liés à votre promotion
+related_promotions_2: liés à la promotion
+
+result_quiz_title: Résultat du quiz
+quiz_in_progress_title: Quiz en cours
+
+list_promotions_title: Liste des promotions
+count_users_title: Nombre d'utilisateurs
+count_quiz_title: Nombre de quiz
+
+list_users_related_quiz_title: Liste des utilisateurs liés au quiz
+
+average_time_per_user: Durée moyenne des élèves
+average_success_rate: Taux de réussite moyen
+
+label: Libellé
+category: Catégorie
+count_questions: Nombre de questions
+progress: Avancé
+actions: Actions
+account: Compte
+firstname: Prénom
+lastname: Nom
+email: Email
+password: Mot de passe
+cancel: Annuler
+confirm: Confirmer
+remember_me: Se souvenir de moi
+login: Se connecter
+register: S'inscrire
+register_2: Inscription
+welcome: Bienvenue
+created_at: Date de création
+duration: Durée
+error: Une erreur semble être survenue..
+completion_time: Temps de réalisation
+on_: sur
+right_answer_on: bonne réponse sur
+right_answer: bonne réponse
+second_average_p_question: seconde en moyenne par question
+details_quiz: Détails du quiz
+answer_available: Réponse(s) disponible(s)
+answer_not_available: Réponse(s) non disponible(s)
+answer_selected: Réponse(s) sélectionnée(s)
+correct_answer: Réponse(s) correcte(s)
+question_not_available: Aucune question disponible.
+send: Envoyer
+remaining_time: Temps restant
+success_rate: Taux de réussite
+time_exceeded: Temps écoulé
+unknown: Inconnu
+finish: Terminé
+from_: du
+created_by: réalisé par

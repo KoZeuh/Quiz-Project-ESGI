@@ -1,0 +1,29 @@
+- Il doit y avoir différentes promotions ✅
+- Un formateur peut faire parti de plusieurs promotions et peut créer des formulaires ✅
+- Un utilisateur ne peut faire partie que d'une seule promotion ✅
+
+Il y a 3 rôles différents :
+- Utilisateur (élève) ✅
+- Formateur ✅
+- Administrateur (de l'école) ✅
+
+Ces rôles peuvent faire :
+
+- Utilisateur (Afficher les quiz, Répondre aux quiz, voir les quiz réalisés et leurs résultats) ✅
+- Formateur (Création de quiz lié à ses promotions ✅, Affichage des quiz et les résultats associés ✅, Affichage des statistiques ✅)
+- Administrateur (Tout ce qu'on les 2 autres, création d'accès user/formateur) ✅
+
+
+Fonctionnalités :
+
+- Statistique par quiz ✅ / statistique global du cumul de tout les quiz (à afficher dans la liste des quiz)(temps moyen par qst, taux de réussite) ✅
+- Affichage des questions choisies, des bonnes réponses (Fomateur/Admin) ✅
+- Affichage des réponses choisies et de la bonne réponse (Utilisateur) ✅
+
+
+Contraintes :
+
+- Un utilisateur ne peut pas faire 2x le même quiz (SAUF si un admin/formateur lui a autorisé à le refaire) ✅
+- Une durée maximale du quiz doit pouvoir être définie à la création (Si l'user ne le finit pas avant le temps = invalidé) ✅
+
+- Un quiz doit avoir : Nom, Catégorie, QCM/QU/Autres formats ✅

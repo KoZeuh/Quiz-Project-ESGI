@@ -1,0 +1,102 @@
+home_nav_title: Inicio
+list_quiz_nav_title: Lista de Cuestionarios
+my_results_nav_title: Mis Resultados
+management_separator_nav_title: Gestión
+profile_nav_title: Perfil
+admin_nav_title: Administración
+results_title: Resultados
+login_nav_title: Iniciar Sesión
+logout_nav_title: Cerrar Sesión
+register_nav_title: Registrarse
+
+count_quiz: Número de Cuestionarios
+count_users: Miembro(s) Activo(s)
+categories_title: Categoría(s)
+
+welcome_title: ¡Bienvenido a ESGI Quiz!
+welcome_paragraph: Estás en el mejor sitio de cuestionarios en francés. ¡Inicia sesión o regístrate para disfrutar de una experiencia extraordinaria!
+
+join_us_title: ¿Quieres unirte a nosotros?
+join_us_paragraph: ESGI Quiz está reclutando desarrolladores, ¡ahora es el momento de aprovechar tu oportunidad!
+join_us_apply: Aplicar
+
+my_quiz_in_progress_title: Mis Cuestionarios en Curso
+no_quiz_in_progress_title: No hay Cuestionarios en Curso..
+reload_page: Por favor, recarga la página si crees que hay un error.
+
+my_recently_completed_quiz_title: Mis Cuestionarios Recientemente Completados
+achieved: logrado
+this_month: este mes
+
+my_profile_title: Mi Perfil
+change_password_title: Cambiar Contraseña
+change_password_title_2: Cambiando Tu Contraseña
+change_email_title: Cambiar Correo Electrónico
+change_email_title_2: Cambiando Tu Correo Electrónico
+appli_settings_title: Configuraciones de la Aplicación
+personal_informations_title: Información Personal
+
+welcome_back_login_title: ¡Bienvenido de Nuevo!
+welcome_back_login_paragraph: Ingresa tu información para iniciar sesión.
+register_paragraph: Ingresa tu información para registrarte.
+dont_have_account: ¿No tienes una cuenta?
+already_have_account: ¿Ya tienes una cuenta?
+
+list_finished_quiz_title: Lista de Cuestionarios Terminados
+list_quiz_title: Lista de Cuestionarios
+no_quiz_participated: Continúa respondiendo cuestionarios para ver resultados aquí.
+none_quiz_finished: No has terminado ningún cuestionario.
+related_promotions: relacionado con tu promoción
+related_promotions_2: relacionado con la promoción
+
+result_quiz_title: Resultado del Cuestionario
+quiz_in_progress_title: Cuestionario en Progreso
+
+list_promotions_title: Lista de Promociones
+count_users_title: Número de Usuarios
+count_quiz_title: Número de Cuestionarios
+
+list_users_related_quiz_title: Lista de Usuarios Relacionados con el Cuestionario
+
+average_time_per_user: Tiempo Promedio por Estudiante
+average_success_rate: Tasa de Éxito Promedio
+
+label: Etiqueta
+category: Categoría
+count_questions: Número de Preguntas
+progress: Progreso
+actions: Acciones
+account: Cuenta
+firstname: Nombre
+lastname: Apellidos
+email: Correo Electrónico
+password: Contraseña
+cancel: Cancelar
+confirm: Confirmar
+remember_me: Recuérdame
+login: Iniciar Sesión
+register: Registrarse
+register_2: Registro
+welcome: Bienvenido
+created_at: Fecha de Creación
+duration: Duración
+error: Parece que ha ocurrido un error..
+completion_time: Tiempo de Finalización
+on_: de
+right_answer_on: respuesta correcta de
+right_answer: respuesta correcta
+second_average_p_question: segundo en promedio por pregunta
+details_quiz: Detalles del Cuestionario
+answer_available: Respuesta(s) Disponible(s)
+answer_not_available: Respuesta(s) No Disponible(s)
+answer_selected: Respuesta(s) Seleccionada(s)
+correct_answer: Respuesta(s) Correcta(s)
+question_not_available: No hay Pregunta Disponible.
+send: Enviar
+remaining_time: Tiempo Restante
+success_rate: Tasa de Éxito
+time_exceeded: Tiempo Excedido
+unknown: Desconocido
+finish: Terminado
+from_: de
+created_by: creado por
