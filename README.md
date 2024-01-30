@@ -7,7 +7,7 @@
 <details>
   <summary><strong>➡️ Screenshots (SOON)</strong></summary>
   <br/>
-  <img align="left" src="https://github.com/KoZeuh/Appli-Web-Quiz/blob/main/DOCUMENTS/schema.jpg" width="280" target="_blank"/>
+  <img align="left" src="https://github.com/KoZeuh/Quiz-Project-ESGI/blob/main/DOCUMENTS/schema.svg" width="280" target="_blank"/>
   <br/>
 </details>
 
