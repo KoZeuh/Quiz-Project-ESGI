@@ -55,8 +55,9 @@
 3. Run the `composer i` command in the project root.
 4. Modify your database connection information. (`.env`)
 5. Run fixtures to get a dataset and an administrator account. (`php bin/console doctrine:fixtures:load`) (_Admin Account credentials will be displayed at the end of command execution_)
-6. Go to the management panel, and put yourself in one or more promotions to get the quizzes.
-7. Run the `symfony server:start -d` command
+6. Run the `symfony server:start -d` command
+7. Go to the management panel, and put yourself in one or more promotions to get the quizzes.
+
 
 ## Authors ✨
 
