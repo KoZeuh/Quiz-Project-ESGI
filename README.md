@@ -6,7 +6,7 @@
 
 <details>
   <summary><strong>➡️ Screenshots (Application)</strong></summary><br/>
-  <img src="https://github.com/KoZeuh/Quiz-Project-ESGI/blob/main/screenshots/home_no_connected.png" width="280" target="_blank"/>
+  <img src="https://github.com/KoZeuh/Quiz-Project-ESGI/blob/main/screenshots/home_not_connected.png" width="280" target="_blank"/>
   <img src="https://github.com/KoZeuh/Quiz-Project-ESGI/blob/main/screenshots/login.png" width="280" target="_blank"/>
   <img src="https://github.com/KoZeuh/Quiz-Project-ESGI/blob/main/screenshots/register.png" width="280" target="_blank"/>
   <img src="https://github.com/KoZeuh/Quiz-Project-ESGI/blob/main/screenshots/home_connected_no_recent_quiz.png" width="280" target="_blank"/>
